@@ -47,27 +47,27 @@
 <br> **no random acess** means we just don't acess low scan we wanna acess many batches for processing 
 <br> eventually consistent as there is delay till master node update data in replicas <horizental scaling eg. hdfs>
 <br> but its instant update in vertical sys as just one machine get updated. <vertical scaling eg.dwh > 
- #### loading and processing data using relational-DB 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+## loading and processing data using relational-DB 
+#### creating azure sql db
+<br> every thing in azure works on **resource group** so we create one for sql database.
+<br> to work on azure ->  **portal.azure.com**
+<br> define DTU for db in configration -> **DTU** is mix of memory and cpu 
+<br> use query editor to query database 
+#### connect ssms with azure sql db
+<br> server type -> db engine 
+<br> go to azure sql db -> sql server -> set server firewall -> create new rule  -> add ip of machine has ssms in start and end.
+<br> then copy server name  and then enter password and username.
+#### loading csv file to ssms
+<br> load flat file as table -> adjust column type and add id for col then query it.
+#### adding json data to blob storage in azure  then to sql db
+<br> we go to storage account -> create storage account -> storage type: blob -> create it over our storage group -> create a container in blob.
+<br> the upload data to this container. 
+<br> use **data factory** -> tool that allow to integrate data from different sources 
+<br> first: create a data factory over our resource group.
+<br> second : in data factory -> choose : author and monitor -> copy data  -> create new connection -> blob -> choose files u want
+<br> third : create connection to sql db -> choose table to load data into.
+<br> then monitor till Done.
+#### 
 <br>
 <br>
 <br>
