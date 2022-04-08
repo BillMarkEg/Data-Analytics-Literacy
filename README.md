@@ -1,5 +1,7 @@
 # Data-Analytics-Literacy
-## Understanding Data Cleaning and Preparation Techniques
+## Representing, Processing, and Preparing Data
+Janani Ravi
+### Understanding Data Cleaning and Preparation Techniques
 <br> clean -> process -> extract insights -> visualize ur insights
 #### genuine outliers 
 <br> very high/low 
@@ -14,7 +16,7 @@
 <br> imputation based on average -> decrease correlation 
 <br> univariable -> means one column 
 <br> bivariable -> means two columns 
-## Preparing Data for Analysis Using Spreadsheets and Python
+### Preparing Data for Analysis Using Spreadsheets and Python
 #### dealing with outliers
 <br> drop it -> if wrong values
 <br> replace with min/max value -> if wrong values and its suitable to do here 
@@ -34,7 +36,7 @@
 <br> reset index to ensure both dfs has same order before concating them.
 #### imputate using ML
 <br> using logstic regression to predict missing values data
-## Collecting Data to Extract Insights
+### Collecting Data to Extract Insights
 <br> scaling  
 <br> normalization 
 <br> normalization makes calculating correlation straightforward.
@@ -47,7 +49,7 @@
 <br> **no random acess** means we just don't acess low scan we wanna acess many batches for processing 
 <br> eventually consistent as there is delay till master node update data in replicas <horizental scaling eg. hdfs>
 <br> but its instant update in vertical sys as just one machine get updated. <vertical scaling eg.dwh > 
-## loading and processing data using relational-DB 
+### loading and processing data using relational-DB 
 #### creating azure sql db
 <br> every thing in azure works on **resource group** so we create one for sql database.
 <br> to work on azure ->  **portal.azure.com**
@@ -67,7 +69,7 @@
 <br> second : in data factory -> choose : author and monitor -> copy data  -> create new connection -> blob -> choose files u want
 <br> third : create connection to sql db -> choose table to load data into.
 <br> then monitor till Done.
-## Representing insights from data 
+### Representing insights from data 
 #### Data used in analyses 
 <br> types of cat data
 <br> nominal -> male/female , day of week so no orders         
@@ -97,102 +99,5 @@
 ####  connect power bi to azure 
 <br> download power bi
 <br> get data menu -> azure sql db -> import -> select table -> load 
-<br> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  
+### END 
