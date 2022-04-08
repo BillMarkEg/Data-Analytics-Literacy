@@ -67,29 +67,37 @@
 <br> second : in data factory -> choose : author and monitor -> copy data  -> create new connection -> blob -> choose files u want
 <br> third : create connection to sql db -> choose table to load data into.
 <br> then monitor till Done.
-#### 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+## Representing insights from data 
+#### Data used in analyses 
+<br> types of cat data
+<br> nominal -> male/female , day of week so no orders         
+<br> ordinal -> grade A is better then B so we can order
+#### working with azure data studio
+<br> downlaoad it -> sql login -> user name and pass of sql db.
+<br> close window and work with editor that help and has many templates for ur queries. eg, drop table/alter...etc
+<br> **alter database db_name set query_store on** so it keeps history of what u write        
+#### view query dashboard in azure data studio
+<br> r-click on datase -> manage -> here you go.
+<br> to add more visualizations to dashboard -> r.click on database -> setting.json -> add to see space taken by each table json string 
+  {
+         "name": "Space Used by Tables",
+         "gridItemConfig": {
+             "sizex": 2,
+             "sizey": 1
+         },
+         "widget": {
+             "table-space-db-insight": null
+         }
+     },
+  
+<br> in azure data studio you can see result of query as visualization too. 
+<br> also u can save to ur pc.
+#### add query result to manage dashboard.
+<br>  in result of query -> create visualization -> create insight -> copy json to setting.json to see it in manage menu
+####  connect power bi to azure 
+<br> download power bi
+<br> get data menu -> azure sql db -> import -> select table -> load 
+<br> 
 <br>
 <br>
 <br>
