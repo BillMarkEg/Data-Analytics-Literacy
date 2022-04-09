@@ -1,14 +1,19 @@
 ## Combining and Shaping Data
 Janani Ravi
 ### Exploring tehniques to combine and shape data 
-<br> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+#### combine and shape data using excel 
+<br> data- > load data -> data type detection -> based on entire data-set -> load 
+#### to join them 
+<br> copy column header from sheet 1 to sheet 2 
+<br> do vlookup or index/match.
+<br> what is better ? 
+<br> 1 - the greatest benefit of using INDEX MATCH over VLOOKUP is the fact that,
+<br> with INDEX MATCH, you can insert columns in your table array without distorting your lookup results.
+<br> Any time you work with a large dataset,
+<br> there's a good chance you'll need to go back to edit our columns and potentially insert a new column
+<br> so using index match is more dynamic than manual lookup
+<br> 2- second : vlookup works only from right to left and on columns only but index/match is more dynamic.
+<br> Lab :  Playstore App Stats.xlsx 
 <br>
 <br>
 <br>
