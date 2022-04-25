@@ -1,4 +1,4 @@
-# Data-Analytics-Literacy #beginner
+# EDA-beginner-Representing, Processing, and Preparing Data 
 ## Representing, Processing, and Preparing Data
 Janani Ravi
 ### Understanding Data Cleaning and Preparation Techniques
