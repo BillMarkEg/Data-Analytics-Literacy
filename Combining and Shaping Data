@@ -82,24 +82,21 @@
   <br> 16- in script area -> select script from blob storage 
   <br> 17 - trigger now. to run.
   <br> 18- create another pipeline to move data from blob (output of transformed data) -> to move it to dwh and do some sql queries.
-  ### 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  ### working with streaming data using data warehouse.
+  <br> transformation can be stateless or statefull
+  <br> stateless-> eg trigger if car speed exeeded a limit so stream is running we trigger or not no data is shared between entities
+  <br> statefull-> count num of cars ber each 10 min so we need to count and share data from window to another 
+  <br> count window -> window that has specific number of rows then end 
+  <br> time window  -> window related to time ex. sliding and tumbling
+  <br> session window -> window / session user do in website foreg.
+  ### creating a stream analytics data.
+  <br> resource group -> storage account -> blob -> upload json file that has input data  
+  <br> create resource -> iot -> stream analytics -> give the job a name -> created. 
+  <br> go to power bi padge on google to set it up -> power bi cloud collaporation sharing option -> create an account for free.
+  <br> got to steaming job again 
+  <br> input -> stream input -> blob storage -> choose subscription and format type of input + some configrations -> give it an alias
+  <br> output -> power bi -> give dataset name -> table name to read from -> give it an alias -> authorize connection to power bi -> done. 
+  <br> query -> write query for steam job to do (can write window function for aggregation) to keep it simple we just select * into output-alias from input-alias 
+  <br> in normal input is streaming source like iot hub but here it is just blob storage file for simplicity.
+  <br> in power bi go to datasets  -> you will find dataset created from stream output so do some visualizations.
+  ##### DONE
