@@ -34,55 +34,55 @@
   ####  unpivot monthly sales  ->  result to "sales rep number sheet."
   <br> load file -> table 1  sheet ->  transform data -> sales rep column -> rclick <unpivot other columns > name it to : unpivot table -> close and load 
   <br> now we created new sheet from original one -> once change in original -> can refresh it by click  in unpivot table from queries and connection menu. 
-  ### agg           : coffee sales metrics            
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  #### grouping data  
+  <br> select data -> outline -> subtotal -> sum on column
+  ### combining and shaping data using SQL. 
+  <br> same as prev. course we create azure sql db and blob storage -> upload files -> connect them using azure data factory
+  ### combining and shaping data using python
+  <br> Jupyter : comining data and manually remove outliers
+  <br> Jupyter : detecting outliers using z-score  
+  <br> Jupyter : handling missing values  
+  <br> bfill/pad to fill null like previos value
+  <br> ffill to fill null like next value
+  <br> dropna thred .9 means must 90% of data has value to not drop column 
+  <br> Jupyter : cleaning data 
+  <br> scatter plot to show correlation between 2 columns.
+  <br> Jupyter : handling imbalanced data 
+  <br> percision = TP / TP + FP
+  <br> recall  = TP/ TP + FN
+  <br> percision and recall are most imp than accuracy as it shows how many ppl with diabete the model can detect which is most imp.
+  <br> i mean its okay to not detect ppl with diabete but its not okay to detect one as diabete and he is not.
+  <br> so if data is imbalanced in this case ppl with diabete are very low sample compared to ppl with no diabete.
+  <br> so we do oversampling -> just douplicate the data is an option so here accuracy will go down but recall and percision will be better.
+  ### integrate data from different source into dwh.
+  #### Azure 
+  <br> just create dwh the same way as normal azure sql db.
+  <br> load data from blob storage as did before using data factory
+  #### gcp 
+  <br> create project in gcp (same as resource group in azure)
+  <br> create bucket  (like container:blob storage in azure) -> upload files to it.
+  <br> in setting of bucket there is a key u can use for connection with azure 
+  <br> in data factory -> copy data -> source -> connectio google cloud s3 -> access key -> in destination connect to azure dwh. the same way. 
+  #### spark application (script to read data from blob and transform it then write to blob again)
+  <br> 1-first we wanna make cluster for spark so 
+  <br> 2-application registery menu -> and give it a name 
+  <br> 3-go to home -> pay as you go subscribtion -> iam -> add role assignment -> contributer -> on app we just created 
+  <br> 4-so now we created the app and user as contributer 
+  <br> 5-open app u can see -> tenant key and id (service agent id/client id) 
+  <br> 6-go to certificates and secrets in app page -> new client secret -> so it create a key to use later.
+  <br> 7-upload pyspark script to blob storage 
+  <br> 8-open data factory -> linked service -> new liked service -> compute (perviosly we used store not compute link linke like sql db or dwh as source.) 
+  <br> 9-compute -> azure HD insights (stands for hadoop cluster) - > ondemand cluster (if u have cluster just connect it) -> choose blob storage (that have file)
+  <br> 10- cluster type -> spark -> service princibal id in #5
+  <br> 11-service princibal key -> in #6 and tenant in #5 
+  <br> 12-give cluser uname and password
+  <br> 13-choose resource group for ur cluster (cluster created. as linked service)
+  <br> 14-finally.. go there is azure data factory new pipeline -> drag HD insights: spark  to pipeline space
+  <br> 15- go to HDI cluster 1 -> select cluster linke we created.  
+  <br> 16- in script area -> select script from blob storage 
+  <br> 17 - trigger now. to run.
+  <br> 18- create another pipeline to move data from blob (output of transformed data) -> to move it to dwh and do some sql queries.
+  ### 
   <br>
   <br>
   <br>
